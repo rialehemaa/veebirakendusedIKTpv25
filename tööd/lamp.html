@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Map area</title>
+</head>
+<body>
+
+<h1>Map area kasutamine</h1>
+<h2>Tuleb klikida monitor, hiir, kast, lamp, tahvel, bloknot ...</h2>
+<img src="arvutipilt.jpg" alt="arvuti pilt" usemap="#arvuti">
+<map name="arvuti">
+    <area shape="circle" coords="481, 509, 50"
+          href="https://www.euronics.ee/it/lisaseadmed/hiired" alt="hiir" target="_blank">
+    <!-- circle coords="x,y, radius" -->
+    <area shape="rect" coords="239,323,422,433" href="monitor.html" alt="monitor">
+    <!-- rect coords="x1, y1, x2, y2" -->
+    <!-- kalnukurk - poly - tuleb võtta kõik koordinaadid vasakult paremale suuna -->
+    <area shape="poly" coords="61,394,174,385,136,482" href="prygi.html" alt="prügikast">
+
+    <area shape="circle" coords="570,243,73" href="lamp.html" alt="lamp">
+
+    <area shape="rect" coords="0,460,225,600"
+          href="https://sitedesign.ee/web-designer/" alt="graafikatahvel" target="_blank">
+
+    <area shape="poly" coords="485,417,563,452,490,455" href="bloknot.html" alt="bloknot">
+
+</map>
+
+<div>Soovid tuld sisse või välja lülitada?</div>
+
+</body>
+</html>
