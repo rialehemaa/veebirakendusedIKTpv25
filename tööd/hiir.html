@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Map area — Hiir</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Map area kasutamine</h1>
+<h2>Tuleb klikida monitor, hiir, prügikast, lamp, tahvel, bloknot ...</h2>
+<img src="arvutipilt.jpg" alt="arvuti pilt" usemap="#arvuti">
+<map name="arvuti">
+  <area shape="circle" coords="481,509,50" href="hiir.html" alt="hiir">
+  <!-- circle coords="x,y,radius" -->
+  <area shape="rect" coords="239,323,422,433" href="monitor.html" alt="monitor">
+  <!-- rect coords="x1,y1,x2,y2" -->
+  <area shape="poly" coords="61,394,174,385,136,482" href="prygi.html" alt="prügikast">
+  <!-- poly coords="x1,y1,x2,y2,x3,y3 ..." -->
+  <area shape="circle" coords="570,243,73" href="lamp.html" alt="lamp">
+  <area shape="rect" coords="0,460,225,600" href="tahvel.html" alt="graafikatahvel">
+  <area shape="poly" coords="485,417,563,452,490,455" href="bloknot.html" alt="bloknot">
+</map>
+
+<div class="kirjeldus esile">
+  <strong>Hiir</strong><br>
+  See on juhtmeta arvutihiir, mis lamab pehmel hiirepadjal laua paremas servas. Hiir on üks põhilisi sisendseadmeid, mis võimaldab kursorit ekraanil liigutada ja programme juhtida täpsemalt kui puuteplaadiga. Juhtmeta hiired on tänapäeval populaarsed, sest need annavad rohkem liikumisvabadust ja hoiavad töölaua korrastatuna.
+</div>
+
+<a class="kodulehele" href="../index.html">← Tagasi kodulehele</a>
+
+</body>
+</html>

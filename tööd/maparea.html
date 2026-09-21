@@ -3,32 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Map area</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <h1>Map area kasutamine</h1>
-<h2>Tuleb klikida monitor, hiir, kast, lamp, tahvel, bloknot ...</h2>
+<h2>Tuleb klikida monitor, hiir, prügikast, lamp, tahvel, bloknot ...</h2>
 <img src="arvutipilt.jpg" alt="arvuti pilt" usemap="#arvuti">
 <map name="arvuti">
-    <area shape="circle" coords="481, 509, 50"
-          href="https://www.euronics.ee/it/lisaseadmed/hiired" alt="hiir" target="_blank">
-    <!-- circle coords="x,y, radius" -->
+    <area shape="circle" coords="481,509,50" href="hiir.html" alt="hiir">
+    <!-- circle coords="x,y,radius" -->
     <area shape="rect" coords="239,323,422,433" href="monitor.html" alt="monitor">
-    <!-- rect coords="x1, y1, x2, y2" -->
-    <!-- kalnukurk - poly - tuleb võtta kõik koordinaadid vasakult paremale suuna -->
+    <!-- rect coords="x1,y1,x2,y2" -->
     <area shape="poly" coords="61,394,174,385,136,482" href="prygi.html" alt="prügikast">
-
+    <!-- poly coords="x1,y1,x2,y2,x3,y3 ..." -->
+    <!-- kalnukurk - poly - tuleb võtta kõik koordinaadid vasakult paremale suuna -->
     <area shape="circle" coords="570,243,73" href="lamp.html" alt="lamp">
-
-    <area shape="rect" coords="0,460,225,600"
-          href="https://sitedesign.ee/web-designer/" alt="graafikatahvel" target="_blank">
-
+    <area shape="rect" coords="0,460,225,600" href="tahvel.html" alt="graafikatahvel">
     <area shape="poly" coords="485,417,563,452,490,455" href="bloknot.html" alt="bloknot">
-
 </map>
+
+<div class="kirjeldus">
+    Klõpsa pildil ühele objektile, et lugeda selle kohta täpsemalt.
+</div>
 <!-- Ülesanne. Lisa kokku 5-6 pildiala, mis linkivad teisele failile sama sisuga.
     ja lisa ka css kujundus-->
-<div>palun tee klick hiirega pildi peal!</div>
+<a class="kodulehele" href="../index.html">← Tagasi kodulehele</a>
 
 </body>
 </html>
+
