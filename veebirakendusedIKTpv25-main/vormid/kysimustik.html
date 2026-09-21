@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Muusika küsimustik</title>
+    <link rel="stylesheet" href="vormStyle.css">
+</head>
+<body>
+<h1>Muusika küsimustik</h1>
+<div>HTML vormid ja nupud</div>
+<form action="#">
+    <!-- c + tab komentaar -->
+
+    <table border="1">
+        <tr>
+            <td>
+                <!-- Tekstkast -->
+                <label for="nimi">Nimi:</label>
+                </td>
+            <td>
+                <input type="text" id="nimi" placeholder="Dariia">
+            </td>
+            </tr>
+        <tr>
+            <td>
+                <!-- ripploend või rippmenüü -->
+                <label for="stiil">Vali meeldivaim muusikastiil:</label>
+                </td>
+            <td>
+                <select name="stiil" id="stiil">
+                    <option value="vali">vali..</option>
+                    <option value="hiphop">hiphop</option>
+                    <option value="kantri">kantri</option>
+                    <option value="rock">rock</option>
+                    <option value="metal">metal</option>
+                    <option value="jazz">jazz</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>
+                    Kuidas sa muusikat peamiselt kuulad?
+                </strong>
+                </td>
+            <td>
+                <input type="radio" name="platvorm" id="spotify">
+                <label for="spotify">Spotify</label>
+                <br>
+                <input type="radio" name="platvorm2" id="raadio">
+                <label for="raadio">raadio</label>
+                <br>
+                <input type="radio" name="platvorm3" id="vinüülplaat">
+                <label for="vinüülplaat">vinüülplaat</label>
+                <br>
+                <input type="radio" name="platvorm4" id="youtube">
+                <label for="youtube">Youtube</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <fieldset>
+                    <legend>Tee oma valikud - lemmik ansambel</legend>
+                    <input type="checkbox" name="lemmikud" id="queen">
+                    <label for="queen">Queen</label>
+                    <br>
+                    <input type="checkbox" name="lemmikud" id="metallica">
+                    <label for="metallica">Metallica</label>
+                    <br>
+                    <input type="checkbox" name="lemmikud" id="abba">
+                    <label for="abba">ABBA</label>
+                    <br>
+                    <input type="checkbox" name="lemmikud" id="nirvana">
+                    <label for="nirvana">Nirvana</label>
+                    <br>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- range - vahemik -->
+                <label for="tund">
+                    Mitu tundi päevas sa kuulad muusikat?
+                </label>
+                </td>
+            <td>
+                0<input type="range" id="tund" min="0" max="24" value="">24
+            </td>
+        </tr>
+        <!--Lemmikvärv-->
+        <tr>
+            <td>
+                <label for="varv">Lemmikvärv:</label>
+            </td>
+            <td>
+                <input type="color" id="varv">
+            </td>
+        </tr>
+        <!-- Oma pilt-->
+        <tr>
+            <td>
+                <label for="pilt">Lisa oma pilt:</label>
+            </td>
+            <td>
+                <input type="file" id="pilt">
+            </td>
+        </tr>
+        <!--E-post-->
+        <tr>
+            <td>
+                <label for="epost">E-post:</label>
+            </td>
+            <td>
+                <input type="email" id="epost" placeholder="nimi@näide.ee">
+            </td>
+        </tr>
+        <!--Sünnipäev-->
+        <tr>
+            <td>
+                <label for="sünnipäev">Sünnipäev:</label>
+            </td>
+            <td>
+                <input type="date" id="sünnipäev">
+            </td>
+        </tr>
+        <!--Telefoninumber-->
+        <tr>
+            <td>
+                <label for="telefon">Telefoninumber:</label>
+            </td>
+            <td>
+                <input type="tel" id="telefon" placeholder="+372 5xxxxxxx">
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <br>
+
+</form>
+</body>
+</html>

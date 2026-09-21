@@ -1,0 +1,51 @@
+form {
+    text-align: left;
+    border-radius: 30px;
+}
+table, td {
+    border-collapse: collapse;
+    width: 40%;
+    padding: 2%;
+    border-radius: 30px;
+    background-color: oldlace;
+    border: 1px solid burlywood;
+}
+input[type=text], input[type=date], input[type=number],
+input[type=email], input[type=tel], select {
+    border: 1px solid burlywood;
+    border-radius: 4px;
+    padding: 1%;
+    background-color: cornsilk;
+}
+h1 {
+    color: sandybrown;
+}
+label, strong {
+    font-weight: bold;
+    color: sienna;
+}
+input[type=radio]:hover {
+    font-size: 20pt;
+    background-color: peachpuff;
+}
+input[type=radio], input[type=range] {
+    accent-color: burlywood;
+}
+
+input[type=checkbox]+label {
+    background-color: cornsilk;
+    font-size: 18pt;
+    padding: 5px;
+    width: 120px;
+    height: 20px;
+    border: 1px solid burlywood;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 40px;
+}
+
+input[type=checkbox]+label:hover {
+    background-color: burlywood;
+    color: white;
+    font-weight: bold;
+}
