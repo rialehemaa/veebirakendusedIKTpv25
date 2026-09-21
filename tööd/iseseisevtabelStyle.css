@@ -1,41 +1,59 @@
-table#iseseisev {
-    border: 3px solid #333333;
-    width: 400px;
-    height: 300px;
+table#iseseisev{
+    border: 3px solid black;
+    width: 500px;
+    height: 350px;
     text-align: center;
     border-collapse: collapse;
+
 }
 
-table#iseseisev td {
-    border: 1px solid #333333;
-    padding: 0;
-    position: relative;
-    vertical-align: middle;
+table#iseseisev td{
+    border: 1px solid #001a73;
+    vertical-align: center;
 }
 
-table#iseseisev td::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+#iseseisev tr:nth-child(1)  td:nth-child(1){
+    background-color: mistyrose;
+}
+#iseseisev tr:nth-child(1)  td:nth-child(2){
+    background-color: lightpink;
+}
+#iseseisev tr:nth-child(1)  td:nth-child(3){
+    background-color: peachpuff;
 }
 
-.c1::before { background-color: mistyrose; }
-.c2::before { background-color: lightpink; }
-.c3::before { background-color: peachpuff; }
-.c4::before { background-color: navajowhite; }
-.c5::before { background-color: lightyellow; }
-.c6::before { background-color: honeydew; }
-.c7::before { background-color: paleturquoise; }
-.c8::before { background-color: lightcyan; }
-.c9::before { background-color: palegreen; }
-.c10::before { background-color: lavender; }
-.c11::before { background-color: lightsteelblue; }
-.c12::before { background-color: powderblue; }
-.c13::before { background-color: plum; }
-.c14::before { background-color: thistle; }
-.c1a::before { background-color: khaki; }
-.c5a::before { background-color: lavenderblush; }
+#iseseisev tr:nth-child(2)  td:nth-child(1){
+    background-color: navajowhite;
+}
+#iseseisev tr:nth-child(2)  td:nth-child(2){
+    background-color: lightyellow;
+}
+#iseseisev tr:nth-child(2)  td:nth-child(3){
+    background-color: honeydew;
+}
+#iseseisev tr:nth-child(2)  td:nth-child(4){
+    background-color: paleturquoise;
+}
+#iseseisev tr:nth-child(2)  td:nth-child(5){
+    background-color: lightcyan;
+}
+
+#iseseisev tr:nth-child(3)  td:nth-child(1){
+    background-color: palegreen;
+}
+#iseseisev tr:nth-child(3)  td:nth-child(2){
+    background-color: lightsteelblue;
+}
+#iseseisev tr:nth-child(3)  td:nth-child(3){
+    background-color: powderblue;
+}
+#iseseisev tr:nth-child(3)  td:nth-child(4){
+    background-color: plum;
+}
+
+#iseseisev tr:nth-child(4)  td:nth-child(1){
+    background-color: lavender;
+}
+#iseseisev tr:nth-child(4)  td:nth-child(2){
+    background-color: thistle;
+}
