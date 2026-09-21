@@ -2,7 +2,7 @@ body {
     font-family: Georgia, serif;
     background-color: aliceblue;
     color: darkslategray;
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 20px auto;
     padding: 0 20px;
 }
@@ -23,6 +23,32 @@ img {
     border-radius: 8px;
     border: 1px solid saddlebrown;
 }
+
+.fragment {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid saddlebrown;
+}
+
+.fragment img {
+    position: absolute;
+    width: 1200px;
+    max-width: none;
+    float: none;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.crop-hiir img    { left: -688px; top: -740px; }
+.crop-monitor img { left: -410px; top: -498px; }
+.crop-prygi img    { left: -17px;  top: -600px; }
+.crop-lamp img     { left: -800px; top: -249px; }
+.crop-tahvel img   { left: -8px;   top: -779px; }
+.crop-bloknot img  { left: -767px; top: -605px; }
 
 .kirjeldus {
     overflow: hidden;
@@ -51,5 +77,5 @@ img {
 }
 
 .kodulehele:hover {
-    background-color: royalblue;
+    background-color: blue;
 }
