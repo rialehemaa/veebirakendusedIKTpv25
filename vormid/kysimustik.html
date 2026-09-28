@@ -46,6 +46,33 @@
         </tr>
         <tr>
             <td>
+                <strong>Millist muusikat sa kõige rohkem kuulad?</strong>
+            </td>
+            <td>
+                <input type="radio" name="stiilRadio" id="stiilHiphop" value="Hip-hop" onclick="stiiliRadioValik()">
+                <label for="stiilHiphop">Hip-hop</label>
+                <br>
+                <input type="radio" name="stiilRadio" id="stiilKantri" value="Kantri" onclick="stiiliRadioValik()">
+                <label for="stiilKantri">Kantri</label>
+                <br>
+                <input type="radio" name="stiilRadio" id="stiilRock" value="Rock" onclick="stiiliRadioValik()">
+                <label for="stiilRock">Rock</label>
+                <br>
+                <input type="radio" name="stiilRadio" id="stiilMetal" value="Metal" onclick="stiiliRadioValik()">
+                <label for="stiilMetal">Metal</label>
+                <br>
+                <input type="radio" name="stiilRadio" id="stiilJazz" value="Jazz" onclick="stiiliRadioValik()">
+                <label for="stiilJazz">Jazz</label>
+                <br>
+                <input type="radio" name="stiilRadio" id="stiilPop" value="Pop" onclick="stiiliRadioValik()">
+                <label for="stiilPop">Pop</label>
+            </td>
+            <td>
+                <div id="vastus8"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <strong>
                     Kuidas sa muusikat peamiselt kuulad?
                 </strong>
@@ -104,6 +131,35 @@
                 <div id="vastus4"></div>
             </td>
         </tr>
+<!--2.muusika kuulamisest-->
+        <tr>
+            <td>
+                <label for="arvamus">Mida arvad muusika kuulamisest koolis?</label>
+            </td>
+            <td>
+                <textarea id="arvamus" name="arvamus" rows="4" cols="50" placeholder="Kirjuta oma arvamus siia..." oninput="textareaValik()"></textarea>
+            </td>
+            <td>
+                <div id="vastus6"></div>
+            </td>
+        </tr>
+        <!--4.kuulad raadiot-->
+        <!--4.kuulad raadiot-->
+        <tr>
+            <td>
+                <strong>Kas sa kuulad raadiot?</strong>
+            </td>
+            <td>
+                <input type="radio" name="raadioValik" id="raadioJah" value="Jah" onclick="raadioJahEiValik()">
+                <label for="raadioJah">Jah</label>
+                <br>
+                <input type="radio" name="raadioValik" id="raadioEi" value="Ei" onclick="raadioJahEiValik()">
+                <label for="raadioEi">Ei</label>
+            </td>
+            <td>
+                <div id="vastus7"></div>
+            </td>
+        </tr>
         <!--Lemmikvärv-->
         <tr>
             <td>
@@ -149,17 +205,18 @@
                 <input type="tel" id="telefon" placeholder="+372 5xxxxxxx">
             </td>
         </tr>
-
-        <td>
-            <input type="reset" value="Puhasta" onclick="puhasta()">
-        </td>
-        <td>
-            <input type="button" value="Näita/Loe andmed" onclick="naitaKoike()">
-        </td>
-        <td>
-            <div id="vastusKoik"></div>
-        </td>
-
+        <tr>
+            <td>
+                <input type="reset" value="Puhasta" onclick="puhasta()">
+            </td>
+            <td>
+                <input type="button" value="Näita/Loe andmed" onclick="naitaKoike()">
+            </td>
+            <td>
+                <div id="vastusKoik"></div>
+            </td>
+        </tr>
+    </table>
 </form>
 </body>
 </html>
