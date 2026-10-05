@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programmeerimise küsimustik</title>
+    <link rel="stylesheet" href="kysimustik2.css">
+    <script src="../js/kysimustik2Script.js"></script>
+</head>
+<body>
+<h1>Programmeerimise küsimustik</h1>
+
+<table border="1">
+    <tr>
+        <td><strong>Küsimus</strong></td>
+        <td><strong>Vastus</strong></td>
+    </tr>
+    <tr>
+        <!-- esimene küsimus vottab see mis oli kysimustlik.html-is(checkbox - markerruut )-->
+        <td>
+            <label>Milliseid programmeerimiskeeli sa tead?</label><br>
+            <input type="checkbox" name="keeled" id="js" value="JavaScript" onchange="checkboxValik()">
+            <label for="js">JavaScript</label><br>
+            <input type="checkbox" name="keeled" id="python" value="Python" onchange="checkboxValik()">
+            <label for="python">Python</label><br>
+            <input type="checkbox" name="keeled" id="java" value="Java" onchange="checkboxValik()">
+            <label for="java">Java</label><br>
+            <input type="checkbox" name="keeled" id="csharp" value="C#" onchange="checkboxValik()">
+            <label for="csharp">C#</label><br>
+            <input type="checkbox" name="keeled" id="php" value="PHP" onchange="checkboxValik()">
+            <label for="php">PHP</label>
+        </td>
+        <td>
+            <div id="vastus1"></div>
+        </td>
+    </tr>
+    <tr>
+        <!-- teine küsimus vottab see mis oli kysimustlik.html-is (2.muusika kuulamisest)-->
+        <td>
+            <label for="arvamus">Mida arvad programmeerimise õppimisest?</label>
+        </td>
+        <td>
+            <textarea id="arvamus" rows="4" cols="40" placeholder="Kirjuta oma arvamus siia..."  oninput="textareaValik()"></textarea>
+            <div id="vastus2"></div>
+        </td>
+    </tr>
+    <tr>
+        <!-- kolmas küsimus vottab see mis oli kysimustlik.html-is (range - vahemik )-->
+        <td>
+            <label for="tund">Mitu tundi nädalas tegeled programmeerimisega?</label>
+        </td>
+        <td>
+            0<input type="range" id="tund" min="0" max="168" onchange="rangeValik()">168
+            <div id="vastus3"></div>
+        </td>
+    </tr>
+    <tr>
+        <!-- neljas küsimus vottab see mis oli kysimustlik.html-is ( 4.kuulad raadiot )-->
+        <td>
+            <label>Kas sulle meeldib programmeerida?</label>
+        </td>
+        <td>
+            <input type="radio" name="meeldib" id="jah" value="Jah" onclick="radioValik()">
+            <label for="jah">Jah</label>
+            <input type="radio" name="meeldib" id="ei" value="Ei" onclick="radioValik()">
+            <label for="ei">Ei</label>
+            <br>
+            <img id="meeldibPilt" src="" width="80">
+            <div id="vastus4"></div>
+        </td>
+    </tr>
+    <tr>
+        <!-- viimane küsimus vottab see mis oli kysimustlik.html-is ( Tekstkast ) -->
+        <td>
+            <label for="toriistad">Milliseid programmeerimisega seotud tööriistu oskad nimetada?</label>
+        </td>
+        <td>
+            <input type="text" id="toriistad" placeholder="Visual Studio Code, GitHub..." oninput="textValik()">
+            <div id="vastus5"></div>
+        </td>
+    </tr>
+    <tr>
+        <!-- kuues küsimus vottab see mis oli kysimustlik.html-is( ripploend või rippmenüü )-->
+        <td>
+            <label for="soovKeel">Millist programmeerimiskeelt sooviksid kõige rohkem õppida?</label>
+        </td>
+        <td>
+            <select id="soovKeel" onchange="selectValik()">
+                <option value="vali">vali..</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="C#">C#</option>
+                <option value="PHP">PHP</option>
+                <option value="C++">C++</option>
+            </select>
+            <div id="vastus6"></div>
+        </td>
+    </tr>
+    <!-- seitsmes küsimus vottab see mis oli kysimustlik.html-is ( nüppud ) -->
+    <tr>
+        <td>
+            <input type="button" value="Saada" onclick="naitaKoike()">
+        </td>
+        <td>
+            <input type="button" value="Puhasta" onclick="puhasta()">
+        </td>
+        <td>
+            <div id="vastusKoik"></div>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

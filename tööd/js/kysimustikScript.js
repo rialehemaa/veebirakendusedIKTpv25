@@ -8,6 +8,7 @@ function nimiLugemineKastist(){
 }
 //radio valikud
 function radioValik(){
+    let pilt=document.getElementById("platvormPilt");
     let vastus2=document.getElementById("vastus2");
     let spotify=document.getElementById("spotify");
     let raadio=document.getElementById("raadio");
@@ -18,12 +19,16 @@ function radioValik(){
     let valik="";
     if(spotify.checked){
         valik=spotify.value;
+        pilt.src="../images/spotify.png";
     } else if(raadio.checked){
         valik=raadio.value;
+        pilt.src="../images/raadio.png";
     } else if(vinyl.checked){
         valik=vinyl.value;
+        pilt.src="../images/vinüülplaat.png";
     } else if(youtube.checked){
         valik=youtube.value;
+        pilt.src="../images/youtube.png";
     } else{
         valik="palun tee oma valik";
     }
@@ -83,6 +88,7 @@ function checkboxValik(){
     if(nirvana.checked){
         valik2+=nirvana.value +', <br>';
     }
+    //tee oma valik
     if(valik2==""){
         valik2="Tee oma valik!";
     }
