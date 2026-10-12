@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulaatorid</title>
+    <link rel="stylesheet" href="kalkStyle.css">
+    <script src="../js/kalk1Script.js"></script>
+</head>
+<body>
+<h1>Kalkulaatorid</h1>
+<section>
+    <!-- css paigutus flex row -->
+    <section id="kalk1">
+        <h2>Meetri/tolli kalkulaator</h2>
+        <br>
+        <label for="arv"> Sisesta arv</label>
+        <input type="number" id="arv" min="1" max="100" step="1" onchange="teisendamine()">
+        <br>
+        <input type="radio" name="valik" id="meeter" value="meeter" onchange="teisendamine()">
+                <label for="meeter">Meeter</label>
+        <br>
+        <input type="radio" name="valik" id="tolli" value="tolli" onchange="teisendamine()">
+                <label for="tolli">Toll</label>
+        <br>
+        <div id="vastus"></div>
+        <img src="" alt="" id="vastusepilt">
+    </section>
+    <section id="kalk2"> kalk2 </section>
+    <section id="kalk3"> kalk3 </section>
+
+</section>
+s
+</body>
+</html>
