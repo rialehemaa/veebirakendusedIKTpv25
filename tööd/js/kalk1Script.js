@@ -13,12 +13,12 @@ function teisendamine(){
                 vastus.innerHTML=arv.value +' meetri = '+
                     (arv.value*toll).toFixed(2) +' tolli';
                 vastus.style.color="red";
-                vastusepilt.src="https://www.taskutark.ee/meeter/";
+                vastusepilt.src="../images/meeter.png";
             } else if(valik[i].value==="tolli"){
                 vastus.innerHTML= arv.value +' tolli = '+
                     arv.value*meeter+'meetri';
                 vastus.style.color="green";
-                vastusepilt.src="https://et.wikipedia.org/wiki/Fail:Inch_tape.jpg";
+                vastusepilt.src="../images/toll.png";
             }
             else {
                 vastus.innerHTML= " Vali ühiku - kas meeter või toll"

@@ -23,6 +23,6 @@ function jookideValik(){
     if(joogiValik.selectedIndex===4){
         vastus2.innerHTML=kogus.value+' Fanta hind on '
             +kogus.value*fanta +'€';
-        vastus.style.color="green";
+        vastus2.style.color="green";
     }
 }

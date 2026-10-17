@@ -6,15 +6,25 @@ section#yld{
 section#kalk1{
     border: 1pt solid grey;
     border-radius: 10px;
-    width: 30%;
+    width: 23%;
     padding: 1%;
 }
 section#kalk2{
     border: 1pt solid grey;
     border-radius: 10px;
-    width: 30%;
+    width: 25%;
+    padding: 1px;
+}
+section#kalk3{
+    border: 1pt solid grey;
+    border-radius: 10px;
+    width: 25%;
     padding: 1px;
 }
 img#vastusepilt{
     width: 100px;
+}
+img#vanusePilt{
+    width: 100px;
+    max-width: 100%;
 }
