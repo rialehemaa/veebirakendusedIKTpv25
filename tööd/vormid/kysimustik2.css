@@ -1,16 +1,14 @@
-input[type=button]{
+input[type=button], input[type=submit]{
     border: 2px solid beige;
     border-radius: 10px;
     padding:5px;
     background-color: beige;
 }
-input[type=button]:hover{
+input[type=button]:hover, input[type=submit]:hover{
     background-color: burlywood;
 }
-div#vastusKoik{
-    border: 2px solid beige;
-    padding:5px;
-    background-color: beige;
+div#vastusKoik:empty{
+    display: none;
 }
 label:hover{ /*hiire liigutus*/
     font-weight: bold;
@@ -23,4 +21,8 @@ td{
     border: 1px solid beige;
     padding: 8px;
     vertical-align: top;
+}
+.viga{
+    color: red;
+    font-weight: bold;
 }

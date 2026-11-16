@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Programmeerimise küsimustik</title>
+    <link rel="stylesheet" href="../vormid/kysimustik2.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="../js/kysimustik2Script.js"></script>
+    <script>
+        $(function(){
+            // peidame vead
+            $('.viga').hide();
+
+            // puhastusnupp
+            $('#puhasta').click(function(){
+                $('#progVorm')[0].reset();
+                $('.viga').hide();
+            });
+
+            // valideerimine, kui vorm on saadetud
+            $('#progVorm').submit(function(event){
+                let valid = true;
+
+                // 1. Checkbox
+                if($('input[name="keeled"]:checked').length === 0){
+                    $('#viga1').show();
+                    valid = false;
+                } else { $('#viga1').hide(); }
+
+                // 2. Textarea
+                if($('#arvamus').val().trim() === ""){
+                    $('#viga2').show();
+                    valid = false;
+                } else { $('#viga2').hide(); }
+
+                // 3. Number (0–168)
+                let tunnid = $('#tund').val();
+                if(tunnid === "" || isNaN(tunnid) || tunnid < 0 || tunnid > 168){
+                    $('#viga3').show();
+                    valid = false;
+                } else { $('#viga3').hide(); }
+
+                // 4. Radio
+                if($('input[name="meeldib"]:checked').length === 0){
+                    $('#viga4').show();
+                    valid = false;
+                } else { $('#viga4').hide(); }
+
+                // 5. Text (ainult tähed)
+                let tekst = $('#toriistad').val().trim();
+                if(tekst === "" || !/^[a-zA-Z\s]+$/.test(tekst)){
+                    $('#viga5').show();
+                    valid = false;
+                } else { $('#viga5').hide(); }
+
+                // 6. Select
+                if($('#soovKeel').val() === ""){
+                    $('#viga6').show();
+                    valid = false;
+                } else { $('#viga6').hide(); }
+
+                // kui on vead, siis ei ole vaja vormi saada
+                if(!valid){
+                    event.preventDefault();
+                } else {
+                    alert("Vorm on edukalt saadetud!");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>Programmeerimise küsimustik</h1>
+
+<form id="progVorm" action="#">
+    <table border="1">
+        <tr>
+            <td><strong>Küsimus</strong></td>
+            <td><strong>Vastus</strong></td>
+        </tr>
+        <tr>
+            <!-- esimene küsimus vottab see mis oli kysimustlik.html-is(checkbox - markerruut )-->
+            <td>
+                <label>Milliseid programmeerimiskeeli sa tead?</label><br>
+                <input type="checkbox" name="keeled" id="js" value="JavaScript" onchange="checkboxValik()">
+                <label for="js">JavaScript</label><br>
+                <input type="checkbox" name="keeled" id="python" value="Python" onchange="checkboxValik()">
+                <label for="python">Python</label><br>
+                <input type="checkbox" name="keeled" id="java" value="Java" onchange="checkboxValik()">
+                <label for="java">Java</label><br>
+                <input type="checkbox" name="keeled" id="csharp" value="C#" onchange="checkboxValik()">
+                <label for="csharp">C#</label><br>
+                <input type="checkbox" name="keeled" id="php" value="PHP" onchange="checkboxValik()">
+                <label for="php">PHP</label>
+            </td>
+            <td>
+                <div id="vastus1"></div>
+                <span class="viga" id="viga1">Vali vähemalt üks programmeerimiskeel!</span>
+            </td>
+        </tr>
+        <tr>
+            <!-- teine küsimus vottab see mis oli kysimustlik.html-is (2.muusika kuulamisest)-->
+            <td>
+                <label for="arvamus">Mida arvad programmeerimise õppimisest?</label>
+            </td>
+            <td>
+                <textarea id="arvamus" rows="4" cols="40" placeholder="Kirjuta oma arvamus siia..."  oninput="textareaValik()"></textarea>
+                <div id="vastus2"></div>
+                <span class="viga" id="viga2">Kirjuta oma arvamus!</span>
+            </td>
+        </tr>
+        <tr>
+            <!-- kolmas küsimus vottab see mis oli kysimustlik.html-is (range - vahemik )-->
+            <td>
+                <label for="tund">Mitu tundi nädalas tegeled programmeerimisega?</label>
+            </td>
+            <td>
+                0<input type="range" id="tund" min="0" max="168" onchange="rangeValik()">168
+                <div id="vastus3"></div>
+                <span class="viga" id="viga3">Tundide arv peab olema 0-168!</span>
+            </td>
+        </tr>
+        <tr>
+            <!-- neljas küsimus vottab see mis oli kysimustlik.html-is ( 4.kuulad raadiot )-->
+            <td>
+                <label>Kas sulle meeldib programmeerida?</label>
+            </td>
+            <td>
+                <input type="radio" name="meeldib" id="jah" value="Jah" onclick="radioValik()">
+                <label for="jah">Jah</label>
+                <input type="radio" name="meeldib" id="ei" value="Ei" onclick="radioValik()">
+                <label for="ei">Ei</label>
+                <br>
+                <img id="meeldibPilt" src="" width="80" alt="">
+                <div id="vastus4"></div>
+                <span class="viga" id="viga4">Vali Jah või Ei!</span>
+            </td>
+        </tr>
+        <tr>
+            <!-- viimane küsimus vottab see mis oli kysimustlik.html-is ( Tekstkast ) -->
+            <td>
+                <label for="toriistad">Milliseid programmeerimisega seotud tööriistu oskad nimetada?</label>
+            </td>
+            <td>
+                <input type="text" id="toriistad" placeholder="Visual Studio Code, GitHub..." oninput="textValik()">
+                <div id="vastus5"></div>
+                <span class="viga" id="viga5">Kirjuta tööriistad (ainult tähed)!</span>
+            </td>
+        </tr>
+        <tr>
+            <!-- kuues küsimus vottab see mis oli kysimustlik.html-is( ripploend või rippmenüü )-->
+            <td>
+                <label for="soovKeel">Millist programmeerimiskeelt sooviksid kõige rohkem õppida?</label>
+            </td>
+            <td>
+                <select id="soovKeel" onchange="selectValik()">
+                    <option value="">vali..</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="C#">C#</option>
+                    <option value="PHP">PHP</option>
+                    <option value="C++">C++</option>
+                </select>
+                <div id="vastus6"></div>
+                <span class="viga" id="viga6">Vali programmeerimiskeel!</span>
+            </td>
+        </tr>
+        <!-- seitsmes küsimus vottab see mis oli kysimustlik.html-is ( nüppud ) -->
+        <tr>
+            <td>
+                <input type="submit" value="Saada">
+            </td>
+            <td>
+                <input type="button" value="Puhasta" id="puhasta" onclick="puhasta()">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div id="vastusKoik"></div>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
