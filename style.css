@@ -158,3 +158,19 @@ main{
     margin: 5px;
     border-radius: 10px;
 }
+#sisu{
+    position: relative;
+    left:0;
+}
+h2{
+    position: relative;
+    left:0;
+}
+/***************SELGITUS*******************/
+section#selgitus{
+    margin: 20px;
+    padding: 15px;
+    border: 1px groove var(--sinine-joon);
+    border-radius: 20px;
+    background-color: var(--sinine-hele);
+}

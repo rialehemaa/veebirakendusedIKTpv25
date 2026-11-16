@@ -5,8 +5,49 @@
   <meta charset="UTF-8">
   <title>Dariia veebirakenduste aluste tööd</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+          integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+          crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      $('#kuva').hide();
+      //nupu peida vajutamine
+      $('#peida').click(function() {
+        $('#sisu').hide(500);
+        $(this).hide();
+        $('#kuva').show();
+      })
+      //nupu kuva vajutamine
+      $('#kuva').click(function() {
+        $('#sisu').show(500);
+        $(this).hide();
+        $('#peida').show();
+      });
+      //uus efekt - fadeTo, pilt muutub poolläbipaistvaks
+      $('#pilt').hover(function() {
+        $(this).fadeTo(400, 0.3);
+      }, function() {
+        $(this).fadeTo(400, 1);
+      });
+
+    });
+    function start(){
+      $('#sisu').draggable(); // lohistada hiirega veebilehel
+      $('#pilt').draggable();
+      $('#sisu').bind("drag", xyKoordinat);
+      $('#pilt').bind("drag", xyKoordinat);
+    }
+    function xyKoordinat(event, ui){
+      let koht=ui.offset;
+      $('#vastus').html('x: '+koht.left+ '//// y: '+koht.top);
+
+    }
+  </script>
 </head>
-<body>
+<body onload="start()">
 <!--veebilehe sisu, mis kasutaja näeb-->
 <!--päis-->
 <header>
@@ -36,20 +77,44 @@
 </nav>
 <!--sisu-->
 <main>
+  <input type="button" value="--->" id="paremale"
+         onclick="$('#sisu, h2').animate({left: '500px'}, 1000);
+           $(this).hide();
+           $('#vasakule').show();">
+  <input type="button" value="<---" id="vasakule" style="display:none"
+         onclick="$('#sisu, h2').animate({left: '0px'}, 1000);
+         $(this).hide();
+         $('#paremale').show();">
+  <input type="button" value="Peida" id="peida">
+  <input type="button" value="Kuva" id="kuva">
+
+
   <section id="osa1">
     <h2>Tere tulemast!</h2>
-    <p>See on veebirakenduste tunnis
-      käsitsi kirjutatud leht!</p>
-    <br>
-    <br>
-    <p>Palun kasuta navigeerimismenüü, et leida info!</p>
+    <div id="sisu">
+      <p>See on veebirakenduste tunnis
+        käsitsi kirjutatud leht!</p>
+      <br>
+      <br>
+      <p>Palun kasuta navigeerimismenüü, et leida info!</p>
+    </div>
   </section>
 
   <section id="osa2">
     <h2>Päevapilt</h2>
     <div>Ise tehtud pilt
-      <img src="paike.png" alt="see on kollane päike">
+      <img src="paike.png" alt="see on kollane päike" id="pilt">
+      <div id="vastus"></div>
+    </div>
+  </section>
 
+  <section id="selgitus">
+    <h2>JQuery'ga on tehtud:</h2>
+    <div>
+      *draggable pilt* - päikese pilti ja teksti saab hiirega lohistada, all näed koordinaate<br>
+      *animate* - nupp "--->" liigutab teksti paremale, nupp "<---" toob tagasi<br>
+      *hide/show* - nupp "Peida" peidab teksti, nupp "Kuva" näitab uuesti<br>
+      * oma: fadeTo - vii hiir päikese peale, pilt muutub poolläbipaistvaks
     </div>
   </section>
 
