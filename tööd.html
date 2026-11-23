@@ -5,6 +5,50 @@
   <meta charset="UTF-8">
   <title>Dariia veebirakenduste aluste tööd</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+  <style type="text/css">
+    nav ul li {
+      position: relative;
+    }
+    #menuu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: block;
+      margin: 0;
+      padding: 0;
+      width: 144px;
+    }
+    #menuu a {
+      display:block;
+      border-bottom: 1px solid #fff;
+      border-right: none;
+      text-decoration: none;
+      font-variant: normal;
+      background: #5b8fc0;
+      color: #fff;
+      padding: 0.3em;
+    }
+    #menuu li {
+      display:block;
+    }
+    .hover {
+      background: #3C9;
+      font-weight: 700;
+    }
+  </style>
+  <script type="text/javascript">
+    $(function(){
+      $('#menuu a').hover(function(event){
+                $(this).addClass('hover');
+              },
+              function(){
+                $(this).removeClass('hover');
+              });
+    });
+  </script>
 </head>
 <body>
 <!--veebilehe sisu, mis kasutaja näeb-->
@@ -26,8 +70,13 @@
     <li>
       <a href="lingid.html">Kasulikud lingid</a>
     </li>
-    <li>
+    <li id="tood">
       <a href="tööd.html">Tehtud tööd</a>
+      <ul id="menuu">
+        <li><a href="tööd/joonis/canvasJoonistamine.html">Canvas Joonistamine</a></li>
+        <li><a href="tööd/vormid/kalkulaatorid.html">Kalkulaatorid</a></li>
+        <li><a href="tööd/vormid/piltideVahetus.html">Piltide vahetus</a></li>
+      </ul>
     </li>
     <li>
       <a href="meedia.html">Meedia</a>
@@ -37,9 +86,7 @@
 <!--põhisisu-->
 <main>
   <section id="kast6">
-    <h2>
-      Tehtud tööde lingid
-    </h2>
+    <h2> Tehtud tööde lingid </h2>
     <p>
       <a href="kujundus2/index.html">Too ai-abiga</a>
       <br>

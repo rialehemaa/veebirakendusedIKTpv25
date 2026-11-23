@@ -166,11 +166,12 @@ h2{
     position: relative;
     left:0;
 }
-/***************SELGITUS*******************/
+/*SELGITUS*/
 section#selgitus{
-    margin: 20px;
+    width: 50%;                 /*laius*/
+    margin: 30px 20px 30px auto;   /*asukoht - paremal*/
     padding: 15px;
-    border: 1px groove var(--sinine-joon);
+    border: 1px groove var(--sinine-joon);   /*raam*/
     border-radius: 20px;
-    background-color: var(--sinine-hele);
+    background-color: var(--sinine-hele);    /*taust*/
 }
