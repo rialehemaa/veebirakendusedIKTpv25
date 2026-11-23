@@ -77,25 +77,23 @@
 </nav>
 <!--sisu-->
 <main>
+  <!--jQuery nupud-->
   <input type="button" value="--->" id="paremale"
-         onclick="$('#sisu, h2').animate({left: '500px'}, 1000);
+         onclick="$('#sisu, #osa1 h2, #osa2 h2').animate({left: '500px'}, 1000);
            $(this).hide();
            $('#vasakule').show();">
   <input type="button" value="<---" id="vasakule" style="display:none"
-         onclick="$('#sisu, h2').animate({left: '0px'}, 1000);
+         onclick="$('#sisu, #osa1 h2, #osa2 h2').animate({left: '0px'}, 1000);
          $(this).hide();
          $('#paremale').show();">
   <input type="button" value="Peida" id="peida">
   <input type="button" value="Kuva" id="kuva">
-
 
   <section id="osa1">
     <h2>Tere tulemast!</h2>
     <div id="sisu">
       <p>See on veebirakenduste tunnis
         käsitsi kirjutatud leht!</p>
-      <br>
-      <br>
       <p>Palun kasuta navigeerimismenüü, et leida info!</p>
     </div>
   </section>
@@ -108,13 +106,13 @@
     </div>
   </section>
 
+  <!--kasutusjuhend-->
   <section id="selgitus">
     <h2>jQuery kasutusjuhend</h2>
     <div>
       *draggable* - vajuta hiirega päikesele või tekstile, hoia nuppu all ja liiguta. Päikese all näed tema asukohta (x ja y)<br>
-      *animate* - vajuta nuppu "--->" ja tekst liigub paremale, nupp "&lt;---" toob selle tagasi<br>
+      *animate* - vajuta nuppu "---&gt;" ja tekst liigub paremale, nupp "&lt;---" toob selle tagasi<br>
       *hide/show* - nupp "Peida" peidab tervitusteksti, nupp "Kuva" näitab selle uuesti<br>
-      *vihjemullid* - vii hiir menüü, nuppude või päikese peale, siis ilmub väike selgitus<br>
       * oma: fadeTo - vii hiir päikese peale ja pilt muutub poolläbipaistvaks, hiir ära viies on pilt jälle hele
     </div>
   </section>

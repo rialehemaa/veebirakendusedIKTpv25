@@ -111,8 +111,11 @@ nav ul li a:hover{ /*link fookuses - hiir on peal*/
     background-color: var(--sinine-kesk);
     color: #ffffff;
 }
+
+/***************SISU*******************/
 main{
     margin-top:20px;
+    padding: 0 5%; /*sisu ei ole ääres kinni*/
 }
 
 /***************MEEDIA*******************/
@@ -158,6 +161,37 @@ main{
     margin: 5px;
     border-radius: 10px;
 }
+
+/***************AVALEHT - jQuery*******************/
+/*jQuery nupud*/
+main input[type=button]{
+    background-color: var(--sinine-hele);
+    color: var(--sinine-tume);
+    border: 2px solid var(--sinine-kesk);
+    border-radius: 15px;
+    padding: 6px 20px;
+    margin: 5px 5px 15px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+main input[type=button]:hover{ /*hiir on peal*/
+    background-color: var(--sinine-kesk);
+    color: #ffffff;
+}
+/*tervitus ja päevapilt kastides*/
+/*tervitus ja päevapilt kastides*/
+section#osa1, section#osa2{
+    box-sizing: border-box; /*kast ei lähe ekraanist välja*/
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--sinine-joon);
+    border-radius: 20px;
+    background-color: #ffffff;
+}git add .
+section#osa1 h2, section#osa2 h2{
+    color: var(--sinine-tume);
+    margin-top: 0;
+}
 #sisu{
     position: relative;
     left:0;
@@ -166,12 +200,56 @@ h2{
     position: relative;
     left:0;
 }
-/*SELGITUS*/
+#pilt{
+    width: 150px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/***************SELGITUS*******************/
 section#selgitus{
-    width: 50%;                 /*laius*/
-    margin: 30px 20px 30px auto;   /*asukoht - paremal*/
-    padding: 15px;
-    border: 1px groove var(--sinine-joon);   /*raam*/
+    width: 60%;                 /*laius*/
+    margin: 30px auto;          /*asukoht - keskel*/
+    padding: 20px 30px;
+    border: 2px solid var(--sinine-kesk);    /*raam*/
     border-radius: 20px;
     background-color: var(--sinine-hele);    /*taust*/
+    box-shadow: 0 4px 12px rgba(90, 140, 180, 0.25);
+    line-height: 1.8;
+}
+section#selgitus h2{
+    color: var(--sinine-tume);
+    text-align: center;
+    margin-top: 0;
+}
+
+/***************TÖÖD - alammenüü*******************/
+nav ul li {
+    position: relative;
+}
+#menuu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 144px;
+}
+#menuu a {
+    display:block;
+    border-bottom: 1px solid #fff;
+    border-right: none;
+    text-decoration: none;
+    font-variant: normal;
+    background: #5b8fc0;
+    color: #fff;
+    padding: 0.3em;
+}
+#menuu li {
+    display:block;
+}
+.hover {
+    background: #3C9;
+    font-weight: 700;
 }
